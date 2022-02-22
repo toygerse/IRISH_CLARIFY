@@ -22,6 +22,7 @@ class Net(nn.Module):
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
+        print('loss = %.4f' % loss.item())
 
     def test(self,x):
         return self.forward()
